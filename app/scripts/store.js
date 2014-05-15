@@ -1,0 +1,1 @@
+Density.ApplicationAdapter = DS.FixtureAdapter;

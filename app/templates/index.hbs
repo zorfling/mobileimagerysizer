@@ -1,0 +1,34 @@
+<div class="well">
+    <p>
+        Sizes are rounded up to the nearest pixel<br>
+        All sizes are in px
+    </p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 20%"></td>
+                <th style="width: 20%">MDPI (non-retina)<br>1x</td>
+                <th style="width: 20%">HDPI<br>1.5x</td>
+                <th style="width: 20%">XHDPI (retina)<br>2x</td>
+                <th style="width: 20%">XXHDPI<br>3x</td>
+            </tr>
+        </thead>
+        <tbody style="font-size: 20px; color: #00a0c6">
+            <tr>
+                <td>Width</td>
+                <td style="width: 20%">{{input type="text" id="width-mdpi" value=widthMdpi}}</td>
+                <td style="width: 20%">{{ hdpi widthMdpi}}</td>
+                <td style="width: 20%">{{xhdpi widthMdpi}}</td>
+                <td style="width: 20%">{{xxhdpi widthMdpi}}</td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>{{input type="text" id="height-mdpi" value=heightMdpi}}</td>
+                <td>{{hdpi heightMdpi}}</td>
+                <td>{{xhdpi heightMdpi}}</td>
+                <td>{{xxhdpi heightMdpi}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
