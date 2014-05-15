@@ -29,3 +29,10 @@ Ember.Handlebars.helper('xxhdpi', function(value, options) {
 
     return Math.ceil(value * 3);
 });
+Ember.Handlebars.helper('xxxhdpi', function(value, options) {
+    if (isNaN(value)) {
+        return '';
+    }
+
+    return Math.ceil(value * 4);
+});
