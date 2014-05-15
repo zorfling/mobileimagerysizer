@@ -262,13 +262,13 @@ module.exports = function (grunt) {
         copy: {
             fonts: {
                 files: [
-                    { 
+                    {
                         expand: true,
                         flatten: true,
                         filter: 'isFile',
                         cwd: '<%= yeoman.app %>/bower_components/',
                         dest: '<%= yeoman.app %>/styles/fonts/',
-                        src: [ 
+                        src: [
                             'bootstrap-sass/dist/fonts/**', // Bootstrap
                             'font-awesome/fonts/**' // Font-Awesome
                         ]
@@ -332,6 +332,20 @@ module.exports = function (grunt) {
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
+        },
+        buildcontrol: {
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            pages: {
+                options: {
+                    remote: 'git@github.com:zorfling/mobileimagerysizer.git',
+                    branch: 'gh-pages'
+                }
+            }
         }
     });
 
@@ -385,4 +399,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.loadNpmTasks('grunt-build-control');
 };
